@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{>header}}
+
+    <h1> Help Page</h1>
+    {{#with func as |func|}}
+        {{#with func.arg as | argName|}}
+            <div>This is the help for {{func.name}} function  </div>
+            <div>{{argName.arg1}} and {{argName.arg2}}</div>
+        {{/with}}
+    {{/with}}
+    
+</body>
+</html>
